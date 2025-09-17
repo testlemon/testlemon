@@ -6,6 +6,10 @@ on:
         branches:
         - main   # change if your default branch is master
 
+permissions:
+  contents: read      # read repo content
+  packages: write     # allow publishing packages
+
 jobs:
   build:
     runs-on: ubuntu-latest
