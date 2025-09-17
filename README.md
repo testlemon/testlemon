@@ -1,4 +1,4 @@
-# TestLemon Сore libraries
+# TestLemon Сore
 
 ## Contacts
 
