@@ -1,9 +1,10 @@
 name: Publish .NET Package
 
 on:
-  push:
-    branches:
-      - main   # change if your default branch is master
+    workflow_dispatch:
+    push:
+        branches:
+        - main   # change if your default branch is master
 
 jobs:
   build:
