@@ -30,7 +30,7 @@ jobs:
 
       - name: Configure NuGet source
         run: dotnet nuget add source \
-              --username '${{ github.actor }}' \
+              --username kbahdanovich \
               --password ${{ secrets.GITHUB_TOKEN }} \
               --store-password-in-clear-text \
               --name github \
