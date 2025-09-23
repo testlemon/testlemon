@@ -76,7 +76,7 @@ namespace testlemon
             try
             {
                 var content = File.ReadAllText(filePath);
-                return ConvertToCollection(content, source ?? filePath);
+                return ConvertFromSpec(content, source ?? filePath);
             }
             catch (Exception ex) when (!(ex is ArgumentException) && !(ex is FileNotFoundException))
             {
