@@ -1,4 +1,5 @@
 using System.Text.Json;
+using testlemon;
 using Testlemon.Core.Models;
 using YamlDotNet.Serialization;
 using YamlDotNet.Serialization.NamingConventions;
@@ -57,10 +58,7 @@ namespace Testlemon.Core
         {
             try
             {
-                collection = Uri.IsWellFormedUriString(source, UriKind.Absolute)
-                    ? OpenApiToCollectionConverter.ConvertOpenApiToCollection(openApiSpec, source)
-                    : OpenApiToCollectionConverter.ConvertOpenApiToCollection(openApiSpec);
-
+                collection = OpenApiSpecToCollectionConverter.ConvertFromSpec(openApiSpec, source);
                 return true;
             }
             catch (Exception ex)
